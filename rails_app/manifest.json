@@ -43,7 +43,7 @@
         "nginx"
       ],
       "files": {
-        "recipe/_ruby_common.rb": "recipes/_ruby_common.rb",
+        "recipes/_ruby_common.rb": "recipes/_ruby_common.rb",
         "recipes/<NAME>.rb": "recipes/rails_nginx.rb",
         "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/rails_nginx_spec.rb"
       },
@@ -54,10 +54,7 @@
         "name": {
           "default": "rails_nginx_app"
         }
-      },
-      "partials": [
-        "partials/site_setup.rb"
-      ]
+      }
     }
   }
 }

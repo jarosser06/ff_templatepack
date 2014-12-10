@@ -63,6 +63,7 @@ template app_name do
     hostname: app_name,
     |{ else }|
     hostname: |{.QString .Options.Hostname}|
+    |{ end }|
     socket: unicorn_socket,
     root: File.join(app_path, current)
   })

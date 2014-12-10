@@ -22,7 +22,7 @@ end
 
 directory File.join(|{.QString .Options.Root}|, '.ssh') do
   owner |{.QString .Options.Owner}|
-  group |{.QString .Options.Group}|
+  group |{.QString .Options.Owner}|
   mode 0500
   recursive true
   action :create
