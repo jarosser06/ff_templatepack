@@ -1,0 +1,63 @@
+{
+  "id": "rails_app",
+  "default_type": "nginx",
+  "dependencies": [
+    "rackspace_iptables",
+    "application",
+    "rbenv"
+  ],
+  "options": {
+    "name": {
+      "help": "Name of the recipe to create",
+      "default": "application"
+    },
+    "hostname": {
+      "help": "The hostname for the application"
+    },
+    "repo": {
+      "help": "the repository to deploy from",
+      "default": "## Replace with the customer repository"
+    },
+    "revision": {
+      "help": "the revision to checkout from git",
+      "default": "node.chef_environment"
+    },
+    "owner": {
+      "help": "The application owner"
+    },
+    "ruby": {
+      "help": "The version of ruby to use with the app",
+      "default": "2.1.0"
+    },
+    "root": {
+      "help": "The document root to deploy the application to",
+      "default": "/var/www"
+    },
+    "webserver": {
+      "default": "nginx"
+    }
+  },
+  "types": {
+    "nginx": {
+      "dependencies": [
+        "nginx"
+      ],
+      "files": {
+        "recipe/_ruby_common.rb": "recipes/_ruby_common.rb",
+        "recipes/<NAME>.rb": "recipes/rails_nginx.rb",
+        "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/rails_nginx_spec.rb"
+      },
+      "options": {
+        "owner": {
+          "default": "node['nginx']['user']"
+        },
+        "name": {
+          "default": "rails_nginx_app"
+        }
+      },
+      "partials": [
+        "partials/site_setup.rb"
+      ]
+    }
+  }
+}

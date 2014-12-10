@@ -1,0 +1,9 @@
+{
+  "commands": {
+    "rails_app": {
+      "name": "rails_app",
+      "manifest": "rails_app/manifest.json",
+      "help": "Creates a rails application recipe based on the type, defaults to Apache"
+    }
+  }
+}
