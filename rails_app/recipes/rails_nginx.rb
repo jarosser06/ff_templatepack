@@ -50,6 +50,7 @@ unicorn_ng_service File.join(app_path, 'current') do
   environment node.chef_environment
   user |{.QString .Options.Owner}|
   bundle bundle_cmd
+  pidfile "/tmp/unicorn-#{app_name}.pid"
 end
 
 template app_name do
