@@ -25,6 +25,9 @@
     "owner": {
       "help": "The application owner"
     },
+    "group": {
+      "help": "The owning group of the application files"
+    },
     "ruby": {
       "help": "The version of ruby to use with the app",
       "default": "2.1.0"
@@ -50,6 +53,9 @@
       "options": {
         "owner": {
           "default": "node['nginx']['user']"
+        },
+        "group": {
+          "default": "node['nginx']['group']"
         },
         "name": {
           "default": "rails_nginx_app"

@@ -15,7 +15,7 @@ bundle_cmd = File.Join(node['rbenv']['root_path'], 'shims/bundle')
 application app_name do
   path app_path
   owner |{.QString .Options.Owner}|
-  group |{.QString .Options.Owner}|
+  group |{.QString .Options.Group}|
   repository |{.QString .Options.Repo}|
   revision |{.QString .Options.Revision}|
   environment_name node.chef_environment
