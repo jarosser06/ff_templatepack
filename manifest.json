@@ -1,9 +1,31 @@
 {
-  "commands": {
+  "providers": {
     "rails_app": {
       "name": "rails_app",
       "manifest": "rails_app/manifest.json",
       "help": "Creates a rails application recipe based on the type, defaults to Apache"
     }
+  },
+  "cookbook": {
+    "files": [
+      "Berksfile",
+      "CHANGELOG.md",
+      "Gemfile",
+      "metadata.rb",
+      "README.md",
+      "recipes/default.rb",
+      "test/unit/spec/default_spec.rb",
+      "test/unit/spec/spec_helper.rb"
+    ],
+    "directories": [
+      "attributes",
+      "files",
+      "libraries",
+      "providers",
+      "recipes",
+      "resources",
+      "templates",
+      "test/unit/spec"
+    ]
   }
 }
