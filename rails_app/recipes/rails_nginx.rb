@@ -6,7 +6,13 @@
 #
 
 include_recipe 'nginx'
+include_recipe 'chef-sugar'
 include_recipe '|{.Cookbook.Name}|::_ruby_common'
+
+|{ if ne .Options.Dbcredentials "" }|
+db_credentials = Chef::EncryptedDataBagItem.load(|{.QString .Options.Dbcredentials}|, node.chef_environment)
+db_master = search(:node, "chef_environment:#{node.chef_environment} AND tags:|{.Options.Dbtype}|_master").first
+|{ end }|
 
 app_name = |{.QString .Options.Name}|
 app_path = File.join(|{.QString .Options.Root}|, |{.QString .Options.Name}|)
@@ -24,6 +30,15 @@ application app_name do
     bundler true
     bundle_command bundle_cmd
     precompile_assets true
+    |{ if ne .Options.Dbcredentials "" }|
+    database do
+      adapter |{.QString .Options.Dbadapter}|
+      host best_ip_for(db_master)
+      database db_credentials['database']
+      username db_credentials['username']
+      password db_credentials['password']
+    end
+    |{ end }|
   end
 
   create_dirs_before_symlink %w(tmp tmp/cache)
@@ -42,6 +57,10 @@ unicorn_ng_config File.join(app_path, 'current/config/unicorn.rb') do
   working_directory File.join(app_path, 'current')
   listen unicorn_socket
   pid "/tmp/unicorn-#{app_name}.pid"
+  after_fork <<-EOS
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.establish_connection
+  EOS
 end
 
 unicorn_ng_service File.join(app_path, 'current') do
