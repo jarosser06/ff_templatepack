@@ -4,6 +4,11 @@
       "name": "rails_app",
       "manifest": "rails_app/manifest.json",
       "help": "Creates a rails application recipe based on the type, defaults to Apache"
+    },
+    "rabbitmq": {
+      "name": "rabbitmq",
+      "manifest": "rabbitmq/manifest.json",
+      "help": "Creates a rabbitmq server"
     }
   },
   "cookbook": {
