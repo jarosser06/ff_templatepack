@@ -9,6 +9,11 @@
       "name": "rabbitmq",
       "manifest": "rabbitmq/manifest.json",
       "help": "Creates a rabbitmq server"
+    },
+    "django_app": {
+      "name": "django_app",
+      "manifest": "django_app/manifest.json",
+      "help": "Creates a django application"
     }
   },
   "cookbook": {
