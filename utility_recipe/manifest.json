@@ -1,0 +1,35 @@
+{
+  "id": "utility_recipe",
+  "default_type": "empty",
+  "dependencies": [
+  ],
+  "options": {
+    "name": {
+      "help": "Name of the recipe to create",
+      "default": "default"
+    },
+    "sudo": {
+      "help": "Enable nopasswd sudo for all",
+      "default": "false"
+    }
+  },
+  "types": {
+    "default": {
+      "dependencies": [
+        "sudo",
+        "users",
+        "rackops_rolebook"
+      ],
+      "files": {
+        "recipes/<NAME>.rb": "recipes/default.rb",
+        "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/default_spec.rb"
+      }
+    },
+    "empty": {
+      "files": {
+        "recipes/<NAME>.rb": "recipes/empty.rb",
+        "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/empty_spec.rb"
+      }
+    }
+  }
+}

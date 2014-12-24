@@ -14,6 +14,11 @@
       "name": "django_app",
       "manifest": "django_app/manifest.json",
       "help": "Creates a django application"
+    },
+    "utility_recipe": {
+      "name": "utility_recipe",
+      "manifest": "utility_recipe/manifest.json",
+      "help": "Creates some helpful utility recipes"
     }
   },
   "cookbook": {
