@@ -24,6 +24,7 @@ application app_name do
   group |{.QString .Options.Group}|
   repository |{.QString .Options.Repo}|
   revision |{.QString .Options.Revision}|
+  migrate |{.Options.Migrate}|
   environment_name node.chef_environment
 
   rails do
