@@ -51,6 +51,20 @@
       "partials": [
         "partials/iptables.rb"
       ]
+    },
+    "sentinel": {
+      "files": {
+        "recipes/<NAME>.rb": "recipes/sentinel.rb",
+        "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/sentinel_spec.rb"
+      },
+      "options": {
+        "name": {
+          "default": "redis_sentinel"
+        }
+      },
+      "partials": [
+        "partials/iptables.rb"
+      ]
     }
   }
 }
