@@ -23,6 +23,34 @@
       "partials": [
         "partials/iptables.rb"
       ]
+    },
+    "master": {
+      "files": {
+        "recipes/<NAME>.rb": "recipes/master.rb",
+        "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/master_spec.rb"
+      },
+      "options": {
+        "name": {
+          "default": "redis_master"
+        }
+      },
+      "partials": [
+        "partials/iptables.rb"
+      ]
+    },
+    "slave": {
+      "files": {
+        "recipes/<NAME>.rb": "recipes/slave.rb",
+        "test/unit/spec/<NAME>_spec.rb": "test/unit/spec/slave_spec.rb"
+      },
+      "options": {
+        "name": {
+          "default": "redis_slave"
+        }
+      },
+      "partials": [
+        "partials/iptables.rb"
+      ]
     }
   }
 }
