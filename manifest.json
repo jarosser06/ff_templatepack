@@ -15,6 +15,11 @@
       "manifest": "redis/manifest.json",
       "help": "Creates a redis recipe"
     },
+    "memcached": {
+      "name": "memcached",
+      "manifest": "memcached/manifest.json",
+      "help": "Creates a memcached recipe"
+    },
     "django_app": {
       "name": "django_app",
       "manifest": "django_app/manifest.json",
