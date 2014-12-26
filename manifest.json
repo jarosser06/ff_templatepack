@@ -10,6 +10,11 @@
       "manifest": "rabbitmq/manifest.json",
       "help": "Creates a rabbitmq server"
     },
+    "redis": {
+      "name": "redis",
+      "manifest": "redis/manifest.json",
+      "help": "Creates a redis recipe"
+    },
     "django_app": {
       "name": "django_app",
       "manifest": "django_app/manifest.json",
