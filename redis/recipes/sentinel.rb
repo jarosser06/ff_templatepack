@@ -2,7 +2,7 @@
 # Cookbook Name:: |{ .Cookbook.Name }|
 # Recipe :: |{ .Options.Name }|
 #
-# Copyright |{ .Cookbook.Year }|
+# Copyright |{ .Cookbook.Year }|, Rackspace
 #
 
 include_recipe 'redis-multi::sentinel'
