@@ -6,6 +6,6 @@ describe '|{.Cookbook.Name}|::|{.Options.Name}|' do
   end
 
   it 'includes the memcached recipe' do
-    expect(chef_run).include_recipe('memcached')
+    expect(chef_run).to include_recipe('memcached')
   end
 end

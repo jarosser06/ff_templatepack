@@ -6,14 +6,14 @@ describe '|{.Cookbook.Name}|::|{.Options.Name}|' do
   end
 
   it 'includes the rackops_rolebook default recipe' do
-    expect(chef_run).include_recipe('rackops_rolebook::default')
+    expect(chef_run).to include_recipe('rackops_rolebook::default')
   end
 
   it 'includes the users sysadmins recipe' do
-    expect(chef_run).include_recipe('users::sysadmins')
+    expect(chef_run).to include_recipe('users::sysadmins')
   end
 
   it 'includes the sudo default recipe' do
-    expect(chef_run).include_recipe('sudo::default')
+    expect(chef_run).to include_recipe('sudo::default')
   end
 end

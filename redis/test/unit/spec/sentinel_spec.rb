@@ -6,14 +6,14 @@ describe '|{.Cookbook.Name}|::|{.Options.Name}|' do
   end
 
   it 'includes the redis-multi::sentinel recipe' do
-    expect(chef_run).include_recipe('redis-multi::sentinel')
+    expect(chef_run).to include_recipe('redis-multi::sentinel')
   end
 
   it 'includes the redis-multi::sentinel_default recipe' do
-    expect(chef_run).include_recipe('redis-multi::sentinel_default')
+    expect(chef_run).to include_recipe('redis-multi::sentinel_default')
   end
 
   it 'includes the redis-multi::sentinel_enable recipe' do
-    expect(chef_run).include_recipe('redis-multi::sentinel_enable')
+    expect(chef_run).to include_recipe('redis-multi::sentinel_enable')
   end
 end

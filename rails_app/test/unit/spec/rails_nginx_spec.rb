@@ -6,11 +6,11 @@ describe '|{.Cookbook.Name}|::|{.Options.Name}|' do
   end
 
   it 'includes the nginx recipe' do
-    expect(chef_run).include_recipe('nginx')
+    expect(chef_run).to include_recipe('nginx')
   end
 
   it 'includes the |{.Cookbook.Name}|::_ruby_common recipe' do
-    expect(chef_run).include_recipe('|{.Cookbook.Name}|::_ruby_common')
+    expect(chef_run).to include_recipe('|{.Cookbook.Name}|::_ruby_common')
   end
 
   ##TODO: Add application tests

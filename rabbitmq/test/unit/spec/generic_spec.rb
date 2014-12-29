@@ -6,10 +6,10 @@ describe '|{.Cookbook.Name}|::|{.Options.Name}|' do
   end
 
   it 'includes the chef-sugar recipe' do
-    expect(chef_run).include_recipe('chef-sugar')
+    expect(chef_run).to include_recipe('chef-sugar')
   end
 
   it 'includes the rabbitmq recipe' do
-    expect(chef_run).include_recipe('rabbitmq')
+    expect(chef_run).to include_recipe('rabbitmq')
   end
 end
