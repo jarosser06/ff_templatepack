@@ -5,6 +5,8 @@
 # Copyright |{ .Cookbook.Year }|, Rackspace
 #
 
+node.default['redis-multi']['redis_master'] = 'localhost'
+
 include_recipe 'redis-multi::master'
 include_recipe 'redis-multi'
 include_recipe 'redis-multi::enable'
