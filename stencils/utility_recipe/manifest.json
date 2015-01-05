@@ -1,6 +1,7 @@
 {
   "id": "utility_recipe",
-  "default_type": "empty",
+  "api": 1,
+  "default_stencil": "empty",
   "dependencies": [
   ],
   "options": {
@@ -13,7 +14,7 @@
       "default": "false"
     }
   },
-  "types": {
+  "stencils": {
     "default": {
       "dependencies": [
         "sudo",

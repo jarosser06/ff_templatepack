@@ -1,6 +1,7 @@
 {
   "id": "django_app",
-  "default_type": "nginx",
+  "api": 1,
+  "default_stencil": "nginx",
   "dependencies": [
     "rackspace_iptables",
     "chef-sugar",
@@ -49,7 +50,7 @@
       "default": "localhost"
     }
   },
-  "types": {
+  "stencils": {
     "nginx": {
       "files": {
         "recipes/<NAME>.rb": "recipes/nginx.rb",

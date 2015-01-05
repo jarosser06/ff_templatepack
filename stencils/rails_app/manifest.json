@@ -1,6 +1,7 @@
 {
   "id": "rails_app",
-  "default_type": "nginx",
+  "api": 1,
+  "default_stencil": "nginx",
   "dependencies": [
     "rackspace_iptables",
     "chef-sugar",
@@ -53,7 +54,7 @@
       "default": "mysql2"
     }
   },
-  "types": {
+  "stencils": {
     "nginx": {
       "dependencies": [
         "nginx"

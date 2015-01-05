@@ -1,37 +1,27 @@
 {
-  "providers": {
+  "api": 1,
+  "framework": "chef",
+  "stencil_sets": {
     "rails_app": {
-      "name": "rails_app",
-      "manifest": "rails_app/manifest.json",
       "help": "Creates a rails application recipe based on the type, defaults to Apache"
     },
     "rabbitmq": {
-      "name": "rabbitmq",
-      "manifest": "rabbitmq/manifest.json",
       "help": "Creates a rabbitmq server"
     },
     "redis": {
-      "name": "redis",
-      "manifest": "redis/manifest.json",
       "help": "Creates a redis recipe"
     },
     "memcached": {
-      "name": "memcached",
-      "manifest": "memcached/manifest.json",
       "help": "Creates a memcached recipe"
     },
     "django_app": {
-      "name": "django_app",
-      "manifest": "django_app/manifest.json",
       "help": "Creates a django application"
     },
     "utility_recipe": {
-      "name": "utility_recipe",
-      "manifest": "utility_recipe/manifest.json",
       "help": "Creates some helpful utility recipes"
     }
   },
-  "cookbook": {
+  "base": {
     "files": [
       ".gitignore",
       "Berksfile",

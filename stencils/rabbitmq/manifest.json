@@ -1,6 +1,7 @@
 {
   "id": "rabbitmq",
-  "default_type": "generic",
+  "api": 1,
+  "default_stencil": "generic",
   "dependencies": [
     "rackspace_iptables",
     "rabbitmq"
@@ -22,7 +23,7 @@
       "help": "Tag to open the rabbitmq firewall for"
     }
   },
-  "types": {
+  "stencils": {
     "generic": {
       "files": {
         "recipes/<NAME>.rb": "recipes/generic.rb",
