@@ -1,6 +1,7 @@
 {
   "id": "memcached",
-  "default_type": "default",
+  "default_stencil": "default",
+  "api": 1,
   "dependencies": [
     "rackspace_iptables",
     "memcached"
@@ -14,7 +15,7 @@
       "help": "Tag to open the memcached firewall for, if environment is passed it will open for the whole environment"
     }
   },
-  "types": {
+  "stencils": {
     "default": {
       "files": {
         "recipes/<NAME>.rb": "recipes/default.rb",
