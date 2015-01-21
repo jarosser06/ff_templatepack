@@ -3,6 +3,7 @@
   "framework": "chef",
   "stencil_sets": {
     "rails_app": {
+    "rails": {
       "help": "Creates a rails application recipe based on the type, defaults to Apache"
     },
     "rabbitmq": {
@@ -14,11 +15,14 @@
     "memcached": {
       "help": "Creates a memcached recipe"
     },
-    "django_app": {
+    "django": {
       "help": "Creates a django application"
     },
-    "utility_recipe": {
+    "utility": {
       "help": "Creates some helpful utility recipes"
+    },
+    "mysql": {
+      "help": "Creates some MySQL recipes"
     }
   },
   "base": {
