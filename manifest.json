@@ -2,7 +2,6 @@
   "api": 1,
   "framework": "chef",
   "stencil_sets": {
-    "rails_app": {
     "rails": {
       "help": "Creates a rails application recipe based on the type, defaults to Apache"
     },
